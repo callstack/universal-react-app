@@ -3,8 +3,8 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start-web": "node scripts/start.js",
-    "build-web": "node scripts/build.js",
+		"start-web": "node web/scripts/start.js",
+    "build-web": "node web/scripts/build.js",
 		"start-ios": "react-native run-ios",
     "start-android": "react-native run-android"
 	},
