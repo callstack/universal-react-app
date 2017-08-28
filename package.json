@@ -42,6 +42,7 @@
     "react-dom": "^16.0.0-beta.5",
     "react-native": "0.47.2",
     "style-loader": "0.18.2",
+    "styled-components": "^2.1.2",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.5.9",
     "webpack": "3.5.1",
