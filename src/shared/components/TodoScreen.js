@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/primitives';
 import AddTodo from 'shared/containers/AddTodo';
+import TodoList from 'shared/components/TodoList';
+
 
 const Wrapper = styled.View`
   padding-top: 20px;
@@ -14,12 +16,12 @@ const Header = styled.Text`
   text-align: center;
 `;
 
-const TodoScreen = ({ title, children }) => {
+const TodoScreen = ({ title, todos }) => {
   return (
     <Wrapper>
       <Header>{title}</Header>
       <AddTodo />
-      {children}
+      <TodoList todos={todos} />
     </Wrapper>);
 };
 
