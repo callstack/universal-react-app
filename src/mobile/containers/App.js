@@ -1,4 +1,4 @@
 import React from 'react';
-import TodoScreen from 'shared/components/TodoScreen';
+import TodoScene from 'shared/scenes/TodoScene';
 
-export default () => (<TodoScreen todos={[]} title='TODO APP' />);
+export default () => (<TodoScene todos={[]} title='TODO APP' />);
