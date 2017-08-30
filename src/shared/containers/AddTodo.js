@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components/primitives';
+import { add } from 'shared/actions/todo';
 import AddTodoInput from 'shared/components/AddTodoInput';
 import ActionButton from 'shared/components/ActionButton';
 
@@ -42,4 +44,6 @@ class AddTodo extends Component {
   };
 };
 
-export default AddTodo;
+export default connect(null, (dispatch) => ({
+  onAdd: (text) => { dispatch(add(text))},
+}))(AddTodo);
