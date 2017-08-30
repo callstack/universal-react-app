@@ -1,3 +1,3 @@
 import styled from 'styled-components/native';
 
-export default styled.View;
+export default styled.TouchableOpacity;

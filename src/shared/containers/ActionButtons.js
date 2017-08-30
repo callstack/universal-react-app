@@ -1,14 +1,13 @@
 import React from 'react';
 import ActionButton from 'shared/components/ActionButton';
-import View from 'shared/components/View';
-import Text from 'shared/components/Text';
+import styled from 'styled-components/primitives';
 
-const Wrapper = View`
+const Wrapper = styled.View`
   display: flex;
   flex-direction: row;
 `;
 
-const ButtonContent = Text`
+const ButtonContent = styled.Text`
   margin: 0;
 `;
 
