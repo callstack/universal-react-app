@@ -1,16 +1,18 @@
 import React from 'react';
 import ActionButtons from 'shared/containers/ActionButtons';
-import View from 'shared/components/View';
-import Text from 'shared/components/Text';
+import styled from 'styled-components/primitives';
 
-const Wrapper = View`
+const Wrapper = styled.View`
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   display: flex;
+  padding: 0 2%;
 `;
 
-const Title = Text`
+const Title = styled.Text`
   font-size: 16px;
+  flex-grow: 1;
 `;
 
-export default ({ title, id }) => <Wrapper><Title>{title}</Title><ActionButtons id={id}/></Wrapper>
+export default ({ text, id }) => <Wrapper><Title>{text}</Title><ActionButtons id={id}/></Wrapper>
