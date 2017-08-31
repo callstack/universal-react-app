@@ -1,6 +1,6 @@
 import React from 'react';
 import ActionButton from 'shared/components/ActionButton';
-import styled from 'styled-components/primitives';
+import styled from 'styled-primitives';
 
 const Wrapper = styled.View`
   display: flex;

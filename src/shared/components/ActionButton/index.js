@@ -1,7 +1,7 @@
 import React from 'react';
-import Touchable from 'shared/components/Touchable';
+import styled from 'styled-primitives';
 
-const Wrapper = Touchable`
+const Wrapper = styled.Touchable`
   width: 30px;
   height: 30px;
   margin: 0;

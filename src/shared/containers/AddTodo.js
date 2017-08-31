@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components/primitives';
+import styled from 'styled-primitives';
 import AddTodoInput from 'shared/components/AddTodoInput';
 import ActionButton from 'shared/components/ActionButton';
 
