@@ -1,8 +1,10 @@
 import React from 'react';
+import { addNavigationHelpers } from 'react-navigation';
 import withStore from 'shared/hocs/withStore';
-import { withAll } from 'shared/hocs/todo';
-import TodoScene from 'shared/scenes/TodoScene';
+import withNav from 'shared/hocs/withNavState';
+import Navigator from 'components/Navigator';
 
-const App = (props) => (<TodoScene {...props} title='TODO APP' />);
+const App = ({ dispatch, nav }) =>
+  (<Navigator navigation={addNavigationHelpers({ dispatch, state: nav })} />);
 
-export default withStore(withAll(App));
+export default withStore(withNav(App), Navigator);
