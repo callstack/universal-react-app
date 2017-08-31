@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/primitives';
+import styled from 'styled-primitives';
 import AddTodo from 'shared/containers/AddTodo';
 import TodoList from 'shared/components/TodoList';
 

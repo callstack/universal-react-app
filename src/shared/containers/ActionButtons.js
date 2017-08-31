@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components/primitives';
 import ActionButton from 'shared/components/ActionButton';
+import styled from 'styled-primitives';
 import { remove, toggle } from 'shared/actions/todo';
 
 const Wrapper = styled.View`
@@ -22,6 +22,6 @@ const ActionButtons = ({ onRemove, onToggle, id }) => {
 };
 
 export default connect(null, (dispatch) => ({
-  onRemove: (id) => { dispatch(remove(id))},
-  onToggle: (id) => { dispatch(toggle(id))},
+  onRemove: (id) => { dispatch(remove(id)); },
+  onToggle: (id) => { dispatch(toggle(id)); },
 }))(ActionButtons);

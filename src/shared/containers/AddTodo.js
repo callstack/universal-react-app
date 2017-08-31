@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import styled from 'styled-primitives';
 import { connect } from 'react-redux';
-import styled from 'styled-components/primitives';
 import { add } from 'shared/actions/todo';
 import AddTodoInput from 'shared/components/AddTodoInput';
 import ActionButton from 'shared/components/ActionButton';
@@ -14,6 +14,7 @@ const Wrapper = styled.View`
 
 const ButtonContent = styled.Text`
   color: #00FF00;
+  margin: 0;
 `
 
 class AddTodo extends Component {
@@ -45,5 +46,5 @@ class AddTodo extends Component {
 };
 
 export default connect(null, (dispatch) => ({
-  onAdd: (text) => { dispatch(add(text))},
+  onAdd: (text) => { dispatch(add(text)); },
 }))(AddTodo);
