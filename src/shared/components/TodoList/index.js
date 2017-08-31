@@ -7,7 +7,8 @@ const List = styled.ul`
   margin: 0;
   list-style-type: none;
   padding: 0;
-`
-const renderItem = ({ id, text }) => (<li key={id}><TodoItem id={id} text={text} /></li>)
+`;
 
-export default ({ todos }) => (<List>{todos.map(renderItem)}</List>)
+const renderItem = ({ id, text }) => (<li key={id}><TodoItem id={id} text={text} /></li>);
+
+export default ({ todos }) => (<List>{todos.map(renderItem)}</List>);

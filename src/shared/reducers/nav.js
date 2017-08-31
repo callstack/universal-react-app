@@ -1,4 +1,5 @@
-export default (navigator) => {
-  const initialState = navigator.router.getStateForAction(navigator.router.getActionForPathAndParams('All'));
-  return (state = initialState, action) => navigator.router.getStateForAction(action, state) || state;
+export default ({ router }) => {
+  const firstAction = router.getActionForPathAndParams('All');
+  const initialState = router.getStateForAction(firstAction);
+  return (state = initialState, action) => router.getStateForAction(action, state) || state;
 };

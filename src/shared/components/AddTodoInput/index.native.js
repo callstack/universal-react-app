@@ -7,8 +7,8 @@ const TextInput = styled.TextInput`
 `
 
 export default ({ onChangeText, value }) =>
-  <TextInput
+  (<TextInput
     onChangeText={onChangeText}
     value={value}
     placeholder='Add Todo...'
-  />
+  />);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-primitives';
 import { connect } from 'react-redux';
+import styled from 'styled-primitives';
 import { add } from 'shared/actions/todo';
 import AddTodoInput from 'shared/components/AddTodoInput';
 import ActionButton from 'shared/components/ActionButton';

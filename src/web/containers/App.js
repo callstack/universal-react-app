@@ -1,31 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { TabRouter, createNavigator } from 'react-navigation';
+import routes from 'shared/config/routes';
 import withStore from 'shared/hocs/withStore';
 import withNavState from 'shared/hocs/withNavState';
-import withNavigator from 'containers/withNavigator';
 import Navigation from 'components/Navigation';
 
-const routes = [ 'All', 'Completed', 'Uncompleted'];
+const routeNames = Object.keys(routes);
 
-class App extends Component {
-  navigateTo = (routeName) => {
-    const action = this.props.router.getActionForPathAndParams(routeName);
-    this.props.dispatch(action);
-  }
-
-  render() {
-    const { router, nav } = this.props;
-    const ScreenView = router.getComponentForRouteName(nav.routes[nav.index].routeName);
-    return (
-      <div>
-        <Navigation navigateTo={this.navigateTo} routes={routes} />
-        <ScreenView />
-      </div>
-    )
-  }
+const App = ({ dispatch, router, nav }) => {
+  const ScreenView = router.getComponentForRouteName(nav.routes[nav.index].routeName);
+  return (
+    <div>
+      <Navigation
+        navigateTo={(routeName) => {
+          dispatch(router.getActionForPathAndParams(routeName));
+        }}
+        routes={routeNames} />
+      <ScreenView />
+    </div>
+  )
 }
 
-const Navigator = withNavigator(App);
-
+const Navigator = createNavigator(TabRouter(routes))(App);
 const AppWithNavigation = withNavState(Navigator);
-
 export default withStore(AppWithNavigation, Navigator);

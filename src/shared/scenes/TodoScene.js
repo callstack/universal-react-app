@@ -21,7 +21,8 @@ const TodoScene = ({ title, todos }) => {
       <Header>{title}</Header>
       <AddTodo />
       <TodoList todos={todos || []} />
-    </Wrapper>);
+    </Wrapper>
+  );
 };
 
 export default TodoScene;

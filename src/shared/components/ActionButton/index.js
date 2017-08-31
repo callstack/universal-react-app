@@ -10,4 +10,4 @@ const Wrapper = styled.Touchable`
   display: flex;
 `;
 
-export default ({ onClick, children}) => <Wrapper onPress={onClick}>{children}</Wrapper>
+export default ({ onClick, children }) => (<Wrapper onPress={onClick}>{children}</Wrapper>);

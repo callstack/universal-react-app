@@ -4,7 +4,7 @@ export default ({ navigateTo, routes }) =>
   (<div>
       {routes.map(route =>
         <button
-          onClick={() => { navigateTo(route);} }
+          onClick={() => { navigateTo(route); }}
           key={route}
         >
           {route}

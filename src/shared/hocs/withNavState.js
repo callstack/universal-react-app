@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import withNav from 'shared/selectors/nav';
+import getNav from 'shared/selectors/nav';
 
 export default (Component) => connect(
   (state) => ({
-    nav: withNav(state),
+    nav: getNav(state),
   }),
 )(Component);
