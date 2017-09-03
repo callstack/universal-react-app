@@ -1,4 +1,10 @@
 import React from 'react';
-import TodoScreen from 'shared/components/TodoScreen';
+import { addNavigationHelpers } from 'react-navigation';
+import withStore from 'shared/hocs/withStore';
+import withNavState from 'shared/hocs/withNavState';
+import Navigator from 'components/Navigator';
 
-export default () => (<TodoScreen todos={[]} title='TODO APP' />);
+const App = ({ dispatch, nav }) =>
+  (<Navigator navigation={addNavigationHelpers({ dispatch, state: nav })} />);
+
+export default withStore(withNavState(App), Navigator);

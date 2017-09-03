@@ -1,6 +1,6 @@
 import React from 'react';
+import styled from 'styled-primitives';
 import ActionButtons from 'shared/containers/ActionButtons';
-import styled from 'styled-components/primitives';
 
 const Wrapper = styled.View`
   flex-direction: row;
@@ -15,4 +15,5 @@ const Title = styled.Text`
   flex-grow: 1;
 `;
 
-export default ({ text, id }) => <Wrapper><Title>{text}</Title><ActionButtons id={id}/></Wrapper>
+export default ({ text, id }) =>
+  (<Wrapper><Title>{text}</Title><ActionButtons id={id}/></Wrapper>);
