@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-primitives';
 import { connect } from 'react-redux';
 import { getFiltered } from 'shared/selectors/todo';
+import Navigation from 'shared/containers/Navigation';
 import AddTodo from 'shared/containers/AddTodo';
 import TodoList from 'shared/components/TodoList';
 
@@ -20,6 +21,7 @@ const Header = styled.Text`
 const TodoScene = ({ title, todos }) => {
   return (
     <Wrapper>
+      <Navigation />
       <Header>{title}</Header>
       <AddTodo />
       <TodoList todos={todos} />
@@ -28,4 +30,5 @@ const TodoScene = ({ title, todos }) => {
 
 export default connect((state) => ({
   todos: getFiltered(state),
+  title: state.todo.filter,
 }))(TodoScene);
