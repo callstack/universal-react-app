@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import todos from 'shared/reducers/todo';
+import todo from 'shared/reducers/todo';
 
 export default (Component) => {
-  const reducers = combineReducers({ todos });
+  const reducers = combineReducers({ todo });
   const store = createStore(reducers);
   return (props) =>
     (<Provider store={store}>

@@ -12,3 +12,8 @@ export const toggle = (id) => ({
   type: 'TOGGLE_TODO',
   id,
 });
+
+export const filter = (filter) => ({
+  type: 'FILTER_TODO',
+  filter,
+});

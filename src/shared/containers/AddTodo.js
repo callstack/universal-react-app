@@ -27,6 +27,7 @@ class AddTodo extends Component {
   };
 
   onAdd = () => {
+    this.setState({ text: '' });
     this.props.onAdd(this.state.text);
   };
 
