@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-primitives';
+import { connect } from 'react-redux';
+import { getFiltered } from 'shared/selectors/todo';
 import AddTodo from 'shared/containers/AddTodo';
 import TodoList from 'shared/components/TodoList';
 
@@ -20,9 +22,10 @@ const TodoScene = ({ title, todos }) => {
     <Wrapper>
       <Header>{title}</Header>
       <AddTodo />
-      <TodoList todos={todos || []} />
-    </Wrapper>
-  );
+      <TodoList todos={todos} />
+    </Wrapper>);
 };
 
-export default TodoScene;
+export default connect((state) => ({
+  todos: getFiltered(state),
+}))(TodoScene);
